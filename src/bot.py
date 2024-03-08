@@ -53,14 +53,13 @@ import logging
 from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.redis import RedisStorage, Redis
 
-from keyboards.main_menu_btn import set_main_menu
-from config import settings
-from routers import router
-
+from src.keyboards.main_menu_btn import set_main_menu
+from src.config import settings
+from src.routers import router
 logger = logging.getLogger(__name__)
 
 sys.path.insert(0, os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "src")))
+    os.path.join(os.path.dirname(__file__), "../src")))
 
 
 async def main() -> None:
