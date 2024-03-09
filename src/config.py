@@ -7,6 +7,10 @@ class Settings(BaseSettings):
     BOT_TOKEN: str
     DOMEN_URL: str
 
+    WEBHOOK_SECRET: str
+    WEB_SERVER_HOST: str
+    WEB_SERVER_PORT: int
+
     REDIS_HOST: str
     REDIS_PORT: int
 

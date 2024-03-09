@@ -15,8 +15,7 @@ async def get_currency_rates(min_amount: float = None) -> float:
         inr_task = asyncio.create_task(get_rates_inr(
             min_amount=min_amount, page=str(page)))
 
-        usdt_to_rub = await rub_task
-        usdt_to_inr = await inr_task
+        usdt_to_rub, usdt_to_inr = await asyncio.gather(rub_task, inr_task)
 
         if usdt_to_rub is None or usdt_to_inr is None:
             page += 1
