@@ -11,7 +11,6 @@ from aiogram.webhook.aiohttp_server import (
     setup_application
 )
 
-
 from src.keyboards import main_menu_btn
 from src.config import settings
 from src.routers import router
